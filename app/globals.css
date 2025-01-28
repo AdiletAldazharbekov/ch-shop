@@ -5,6 +5,26 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #ff4646;
+  --primary-10: #ff46461a;
+  --dark: #181c29;
+  --static-white: #ffffff;
+  --static-white-40: #ffffff66;
+  --static-white-20: #ffffff33;
+  --tag-purple: #4361ff;
+  --tag-pink: #ff43f7;
+  --tag-green: #06a44f;
+  --content-background: #ecf3f8;
+  --overlay: #181c29cc;
+
+  --font-main: "Montserrat", sans-serif;
+  --font-decor: "Allura", sans-serif;
+
+  --url-bg-snow: url("/bg-snow.png");
+  --url-bg-ball: url("/bg-ball.png");
+  --url-bg-forest: url("/bg-forest.png");
+  --url-bg-garland: url("/bg-garland.png");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +38,57 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Montserrat", Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 60px 8px;
+  background-color: var(--primary);
+  background-image: var(--url-bg-snow), var(--url-bg-ball);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+h1 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--static-white);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.caption {
+  width: 100%;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  font-family: var(--font-decor);
+  color: var(--static-white);
+  letter-spacing: 0.05em;
+}
+
+.action-btn {
+  width: 100%;
+  max-width: 235px;
+  height: 56px;
+  padding: 20px 32px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  color: var(--static-white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--dark);
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
